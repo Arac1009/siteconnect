@@ -1,0 +1,32 @@
+.voluntariado {
+  width: 100%;
+  padding: 80px 40px;
+  text-align: center;
+
+  h1 {
+    font-family: "Source Sans 3", sans-serif;
+    font-size: 42px;
+    color: #205691;
+    margin-bottom: 60px;
+  }
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 1024px) {
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}
+

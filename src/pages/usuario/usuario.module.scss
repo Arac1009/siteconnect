@@ -1,0 +1,43 @@
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+    section {
+        border: solid 1px red;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        max-width: 900px;
+
+        img {
+            width: 300px;
+            border: 5px solid #00AAFF;
+        }
+
+        ul {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+
+            li {
+                display: flex;
+                align-items: center;
+                gap: 5px;
+                font-size: 14px;
+            }
+        }
+    }
+}
+
+.div {
+    display: flex;
+    flex-direction: column;
+    gap: 10px
+
+    h2 {
+        font-size: 16px;
+        color: #278733;
+    }
+}
