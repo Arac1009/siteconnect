@@ -2,7 +2,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom"
 import "./globalStyles.scss"
 
 import PaginaInicial from "./pages/paginainicial/PaginaInicial"
-import EventosEP from "./pages/eventosep/EventosEP"
+import EventosEP from "./pages/eventosEP/EventosEP"
 import Usuario from "./pages/usuario/Usuario"
 import Doacao from "./pages/doacao/Doacao"
 import Voluntariado from "./pages/voluntariado/Voluntariado"
