@@ -1,39 +1,43 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom"
 import "./globalStyles.scss"
 
-// Páginas
-import PaginaInicial from "./pages/PaginaInicial/PaginaInicial"
-import EventosEP from "./pages/EventosEP/EventosEP"
-import Usuario from "./pages/Usuario/Usuario"
-import Doacao from "./pages/Doacao/Doacao"
-import Voluntariado from "./pages/Voluntariado/Voluntariado"
-import Mentoria from "./pages/Mentoria/Mentoria"
-import Header from "./components/Header/Header"
+import PaginaInicial from "./pages/paginainicial/PaginaInicial"
+import EventosEP from "./pages/eventosEP/EventosEP"
+import Usuario from "./pages/usuario/Usuario"
+import Doacao from "./pages/doacao/Doacao"
+import Voluntariado from "./pages/voluntariado/Voluntariado"
+import Mentoria from "./pages/mentoria/Mentoria"
+
+import Header from "./components/header/Header"
 import Footer from "./components/Footer/Footer"
 
-const Layout = ({ children }) => (
-  <>
-    <Header />
-    {children}
-    <Footer />
-  </>
-)
 
-const App = () => {
+function Layout({ children }) {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Layout><PaginaInicial /></Layout>} />
-        <Route path="/doacao" element={<Layout><Doacao /></Layout>} />
-        <Route path="/voluntariado" element={<Layout><Voluntariado /></Layout>} />
-        <Route path="/usuario" element={<Layout><Usuario /></Layout>} />
-        <Route path="/mentoria" element={<Layout><Mentoria /></Layout>} />
-        <Route path="/eventos-ep" element={<Layout><EventosEP /></Layout>} />
-        
-        <Route path="*" element={<Layout><h1>Página não encontrada</h1></Layout>} />
-      </Routes>
-    </BrowserRouter>
-  )
+    <>
+      <Header />
+      {children}
+      <Footer />
+    </>
+  );
 }
 
-export default App
+function App() {
+  return (
+    <BrowserRouter>
+      <Layout>
+        <Routes>
+          <Route path="/" element={<PaginaInicial />} />
+          <Route path="/doacao" element={<Doacao />} />
+          <Route path="/voluntariado" element={<Voluntariado />} />
+          <Route path="/usuario" element={<Usuario />} />
+          <Route path="/mentoria" element={<Mentoria />} />
+          <Route path="/eventos-ep" element={<EventosEP />} />
+          <Route path="*" element={<h1>Página não encontrada</h1>} />
+        </Routes>
+      </Layout>
+    </BrowserRouter>
+  );
+}
+
+export default App;
